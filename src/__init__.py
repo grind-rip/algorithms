@@ -1,0 +1,3 @@
+"""
+A collection of algorithms.
+"""

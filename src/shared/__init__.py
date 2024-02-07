@@ -1,0 +1,3 @@
+"""
+Functions shared by algorithms.
+"""
