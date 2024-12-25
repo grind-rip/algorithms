@@ -1,6 +1,6 @@
 # todo
 
-- [ ] Cycle detection in directed and undirected graphs
-- [ ] Breadth-first search (BFS)
-- [ ] Depth-first search (DFS)
-- [ ] Binary search
+- [x] Cycle detection in directed and undirected graphs
+- [ ] Breadth-first Search (BFS)
+- [ ] Depth-first Search (DFS)
+- [x] Binary Search
