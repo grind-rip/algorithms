@@ -14,12 +14,10 @@ the element it is searching for. This reduces the average complexity from
 O(nlog n) to O(n), with a worst case of O(n^2).
 """
 
-from typing import List
-
 from .shared.partition import partition
 
 
-def quickselect(l: List[int], left: int, right: int, k: int) -> int:
+def quickselect(l: list[int], left: int, right: int, k: int) -> int:
     """
     Return the k-th element in the given list.
     """

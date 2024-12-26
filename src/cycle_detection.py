@@ -50,10 +50,10 @@ Brent's algorithm based on the idea of exponential search. Here, we will focus
 only on Floyd's cycle-finding algorithm.
 """
 
-from typing import Any, Callable, Tuple
+from typing import Any, Callable
 
 
-def floyd(f: Callable[[Any], Any], x0: Any) -> Tuple[int, int]:
+def floyd(f: Callable[[Any], Any], x0: Any) -> tuple[int, int]:
     """
     Floyd's cycle-finding algorithm (Floyd's tortoise and hare)
 

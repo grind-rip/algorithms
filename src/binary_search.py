@@ -14,10 +14,8 @@ Binary search runs in logarithmic time in the worst case, making O(log n)
 comparisons, where n is the number of elements in the array.
 """
 
-from typing import List
 
-
-def binary_search(l: List[int], target: int) -> int:
+def binary_search(l: list[int], target: int) -> int:
     """
     Return the index of the target value. If the target value is not in the
     list, return -1.

@@ -10,12 +10,10 @@ sorted recursively. This can be done in-place, requiring small additional
 amounts of memory to perform the sorting.
 """
 
-from typing import List
-
 from .shared.partition import partition
 
 
-def quicksort(l: List[int], left: int, right: int) -> None:
+def quicksort(l: list[int], left: int, right: int) -> None:
     """
     Sort the given list using the quicksort algorithm.
     """

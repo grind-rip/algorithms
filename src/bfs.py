@@ -29,7 +29,7 @@ A set of visited nodes is maintained in order to account for graphs with
 cycles, undirected graphs, and graphs where nodes have multiple parents.
 
 Finding the shortest path
-------------------------
+-------------------------
 
 Breadth-first search can also be used when finding the shortest path from the
 root to a target node. This is done by adding the "parent" node to the current
