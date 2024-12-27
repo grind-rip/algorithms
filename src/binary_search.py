@@ -20,10 +20,10 @@ def binary_search(l: list[int], target: int) -> int:
     Return the index of the target value. If the target value is not in the
     list, return -1.
 
-    This implementation uses an iterative approach rather than recursive, as
-    it avoids the overhead of recursion. When using the recursive approach, it
-    is important to note that the original list must be passed to the recursive
-    function along with the target and left and right indices.
+    This implementation uses an iterative approach in order to avoid the
+    overhead of recursion. When using the recursive approach, it is important
+    to note that the original list must be passed to the recursive function
+    along with the target and left and right indices.
     """
     left, right = 0, len(l) - 1
 

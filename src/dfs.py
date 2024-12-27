@@ -15,9 +15,16 @@ Given the following tree:
    / \   / \
   D   E F   G
 
-Depth-first search would visit the nodes in the following order:
+Depth-first search (recursive) would visit the nodes in the following order:
 
   A → B → D → E → C → F → G
+
+Depth-first search (stack) would visit the nodes in the following order:
+
+  A → C → G → F → B → E → D
+
+These two variations of DFS visit the neighbors of each vertex in the opposite
+order.
 
 A stack is used to keep track of the nodes discovered so far along a specified
 branch which helps in backtracking of the graph, however, this algorithm can
@@ -28,9 +35,8 @@ children.
 
 When using a stack, the root node is pushed onto the stack. Then, the first
 node in the stack is iteratively removed (popped), checked (if searching for a
-target), and its children are pushed onto the stack and labeled as "visited".
-The algorithm terminates when the stack is empty and all nodes have been
-visited.
+target), labeled as "visited", and its children are pushed onto the stack. The
+algorithm terminates when the stack is empty and all nodes have been visited.
 
   NOTE: A stack follows LIFO (Last In, First Out).
 
@@ -53,9 +59,10 @@ def dfs(root: Node[T], output: bool = False) -> None:
     # Mark root as visited.
     root.visited = True
 
+    if output:
+        print(f"Visiting node: {root.value}")
+
     for child in root.children:
-        if output:
-            print(f"Visiting node: {child.value}")
         if not child.visited:
             dfs(root=child, output=output)
 

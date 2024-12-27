@@ -22,7 +22,7 @@ Breadth-first search would visit the nodes in the following order:
 A queue is used to keep track of nodes to visit. To initiate the algorithm, the
 root node is pushed onto the queue. Then, the first node in the queue is
 iteratively removed, checked (if searching for a target), and its children are
-pushed onto the queue and labeled as "visited". The algorithm terminates when
+labeled as "visited" and pushed onto the queue. The algorithm terminates when
 the queue is empty and all nodes have been visited.
 
   NOTE: A queue follows FIFO (First In, First Out).
@@ -82,20 +82,23 @@ def bfs_shortest_path(root: Node[T], target: Node[T]) -> list[Node[T]]:
     queue = deque([root])
     root.visited = True
 
-    while queue:
-        curr: Node[T] | None = queue.popleft()
-        if curr == target:
-            path: list[Node[T]] = []
-            while curr:
-                path.append(curr)
-                curr = curr.parent
-            # Reverse path to get root→target order.
-            return path[::-1]
+    def shortest_path(target: Node[T]) -> list[Node[T]]:
+        path: list[Node[T]] = []
+        curr: Node[T] | None = target
+        while curr:
+            path.append(curr)
+            curr = curr.parent
+        # Reverse path to get root → target order.
+        return path[::-1]
 
+    while queue:
+        curr: Node[T] = queue.popleft()
+        if curr == target:
+            return shortest_path(curr)
         for child in curr.children:
             if not child.visited:
                 child.visited = True
-                queue.append(child)
                 child.parent = curr
+                queue.append(child)
 
     return []
