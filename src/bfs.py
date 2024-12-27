@@ -22,8 +22,13 @@ Breadth-first search would visit the nodes in the following order:
 A queue is used to keep track of nodes to visit. To initiate the algorithm, the
 root node is pushed onto the queue. Then, the first node in the queue is
 iteratively removed, checked (if searching for a target), and its children are
-pushed onto the queue and labeled as "visited". The algorithm terminates when the
-queue is empty and all nodes have been visited.
+pushed onto the queue and labeled as "visited". The algorithm terminates when
+the queue is empty and all nodes have been visited.
+
+  NOTE: A queue follows FIFO (First In, First Out).
+
+It should be noted that when using a queue, the node is marked as visited when
+it is added to the queue.
 
 A set of visited nodes is maintained in order to account for graphs with
 cycles, undirected graphs, and graphs where nodes have multiple parents.
@@ -41,20 +46,7 @@ shortest path is reconstructed.
 """
 
 from collections import deque
-from typing import Generic, TypeVar
-
-T = TypeVar('T')
-
-
-class Node(Generic[T]):
-    """
-    A generic node with a value of type 'T'.
-    """
-    def __init__(self, value: T) -> None:
-        self.value: T = value
-        self.visited: bool = False
-        self.parent: Node[T] | None = None
-        self.children: list[Node[T]] = []
+from .shared.node import Node, T
 
 
 def bfs(root: Node[T], output: bool = False) -> None:
@@ -74,8 +66,8 @@ def bfs(root: Node[T], output: bool = False) -> None:
             print(f"Visiting node: {curr.value}")
         for child in curr.children:
             if not child.visited:
-                queue.append(child)
                 child.visited = True
+                queue.append(child)
 
 
 def bfs_shortest_path(root: Node[T], target: Node[T]) -> list[Node[T]]:
@@ -85,7 +77,7 @@ def bfs_shortest_path(root: Node[T], target: Node[T]) -> list[Node[T]]:
 
     Returns an empty list if no path is found.
     """
-    # Create queue, enqueue root, mark root as visited
+    # Create queue, enqueue root, mark root as visited.
     queue = deque([root])
     root.visited = True
 
@@ -96,13 +88,13 @@ def bfs_shortest_path(root: Node[T], target: Node[T]) -> list[Node[T]]:
             while curr:
                 path.append(curr)
                 curr = curr.parent
-            # Reverse path to get root→target order
+            # Reverse path to get root→target order.
             return path[::-1]
 
         for child in curr.children:
             if not child.visited:
-                queue.append(child)
                 child.visited = True
+                queue.append(child)
                 child.parent = curr
 
     return []
