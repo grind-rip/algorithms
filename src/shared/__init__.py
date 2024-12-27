@@ -1,3 +1,3 @@
 """
-Functions shared by algorithms.
+Functions and classes shared by algorithms.
 """
