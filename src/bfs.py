@@ -46,6 +46,7 @@ shortest path is reconstructed.
 """
 
 from collections import deque
+
 from .shared.node import Node, T
 
 

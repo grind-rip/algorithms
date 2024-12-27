@@ -39,6 +39,7 @@ it is removed from the stack.
 """
 
 from collections import deque
+
 from .shared.node import Node, T
 
 
