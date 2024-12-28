@@ -16,10 +16,8 @@ pivot.
 It is used in both the quickselect and quicksort algorithms.
 """
 
-from typing import List
 
-
-def partition(l: List[int], left: int, right: int) -> int:
+def partition(l: list[int], left: int, right: int) -> int:
     """
     Reorder the list such that elements less than the pivot are before elements
     greater than or equal to the pivot. When complete, the pivot is in its
@@ -30,7 +28,7 @@ def partition(l: List[int], left: int, right: int) -> int:
     elements in the slice will not reorder the elements in the original list.
     """
 
-    def swap(l: List[int], i: int, j: int) -> None:
+    def swap(l: list[int], i: int, j: int) -> None:
         """
         Swaps the element at index i with the element at index j.
         """

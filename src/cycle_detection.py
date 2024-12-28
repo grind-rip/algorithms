@@ -10,7 +10,7 @@ in a sequence of iterated function values.
     the same value twice. Furthermore, there must be some pair of distinct
     indices i and j such that xi = xj. Once this happens, the sequence must
     continue periodically, by repeating the same sequence of values from xi to
-    xj − 1. Cycle detection is the problem of finding i and j, given f and x0.
+    xj - 1. Cycle detection is the problem of finding i and j, given f and x0.
 
 Question:
 
@@ -36,7 +36,7 @@ Formally, the task of a cycle detection algorithm is finding μ and λ (defined
 as follows):
 
     Let S be any finite set, f be any function that maps S to itself, and x0 be
-    any element of S. For any i > 0, let xi = f(xi − 1). Let μ be the smallest
+    any element of S. For any i > 0, let xi = f(xi - 1). Let μ be the smallest
     index such that the value xμ reappears infinitely often within the sequence
     of values xi, and let λ (the loop length) be the smallest positive integer
     such that xμ = xλ + μ.
@@ -50,7 +50,8 @@ Brent's algorithm based on the idea of exponential search. Here, we will focus
 only on Floyd's cycle-finding algorithm.
 """
 
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 
 def floyd(f: Callable[[Any], Any], x0: Any) -> tuple[int, int]:

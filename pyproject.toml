@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "algorithms"
+version = "0.0.1"
+description = "A collection of algorithms"
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest",
+  "ruff"
+]
+
+[tool.ruff.lint]
+# E741: do not use variables named 'l', 'O', or 'I'
+# RET505: Unnecessary `elif` after `return` statement
+# RUF002: Docstring contains ambiguous `ν`
+# RUF003: Docstring contains ambiguous `ν`
+# T201: `print` found
+# W605: invalid escape sequence '\ '
+ignore = ["E741", "RET505", "RUF002", "RUF003", "T201", "W605"]

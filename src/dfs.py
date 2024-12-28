@@ -46,10 +46,10 @@ it is removed from the stack.
 
 from collections import deque
 
-from .shared.node import Node, T
+from src.shared.node import Node, T
 
 
-def dfs(root: Node[T], output: bool = False) -> None:
+def dfs(*, root: Node[T], output: bool = False) -> None:
     """
     Traverses a graph from 'root' using depth-first search.
 
@@ -67,7 +67,7 @@ def dfs(root: Node[T], output: bool = False) -> None:
             dfs(root=child, output=output)
 
 
-def dfs_stack(root: Node[T], output: bool = False) -> None:
+def dfs_stack(*, root: Node[T], output: bool = False) -> None:
     """
     Traverses a graph from 'root' using depth-first search using a stack.
 

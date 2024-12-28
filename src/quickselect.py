@@ -9,12 +9,12 @@ n elements.
 Quickselect uses the same overall approach as quicksort, choosing one element
 as a pivot and partitioning the data in two based on the pivot, accordingly as
 less than or greater than the pivot. However, instead of recursing into both
-sides, as in quicksort, quickselect only recurses into one side – the side with
+sides, as in quicksort, quickselect only recurses into one side-the side with
 the element it is searching for. This reduces the average complexity from
 O(nlog n) to O(n), with a worst case of O(n^2).
 """
 
-from .shared.partition import partition
+from src.shared.partition import partition
 
 
 def quickselect(l: list[int], left: int, right: int, k: int) -> int:

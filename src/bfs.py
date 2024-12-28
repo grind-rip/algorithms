@@ -47,10 +47,10 @@ shortest path is reconstructed.
 
 from collections import deque
 
-from .shared.node import Node, T
+from src.shared.node import Node, T
 
 
-def bfs(root: Node[T], output: bool = False) -> None:
+def bfs(*, root: Node[T], output: bool = False) -> None:
     """
     Traverses a graph from 'root' using breadth-first search.
 
@@ -71,7 +71,7 @@ def bfs(root: Node[T], output: bool = False) -> None:
                 queue.append(child)
 
 
-def bfs_shortest_path(root: Node[T], target: Node[T]) -> list[Node[T]]:
+def bfs_shortest_path(*, root: Node[T], target: Node[T]) -> list[Node[T]]:
     """
     Traverses a graph from 'root' using breadth-first search and returns the
     shortest path to 'target'.
