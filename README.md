@@ -16,6 +16,9 @@ Cycle detection or cycle finding is the algorithmic problem of finding a cycle i
 ## [Depth-first Search (DFS)](./src/dfs.py)
 Depth-first search is a graph traversal algorithm that explores as deep as possible along each branch before backtracking and traversing other nodes.
 
+## [Maximum Subarray](./src/maximum_subarray.py)
+The maximum subarray problem is the task of finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. It can be solved in O(n) time and O(1) space.
+
 ## [Quickselect](./src/quickselect.py)
 Quickselect (also known as Hoare's selection algorithm) is a selection algorithm to find the kth smallest (or largest) element in an unordered list of n elements.
 
