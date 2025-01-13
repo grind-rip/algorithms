@@ -31,7 +31,8 @@ It should be noted that when using a queue, the node is marked as visited when
 it is added to the queue.
 
 A set of visited nodes is maintained in order to account for graphs with
-cycles, undirected graphs, and graphs where nodes have multiple parents.
+cycles, undirected graphs, and graphs where nodes have multiple parents. Trees
+are acyclic, therefore a set of visited nodes is not necessary.
 
 Finding the shortest path
 -------------------------

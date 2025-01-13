@@ -42,6 +42,10 @@ algorithm terminates when the stack is empty and all nodes have been visited.
 
 It should be noted that when using a stack, the node is marked as visited when
 it is removed from the stack.
+
+A set of visited nodes is maintained in order to account for graphs with
+cycles, undirected graphs, and graphs where nodes have multiple parents. Trees
+are acyclic, therefore a set of visited nodes is not necessary.
 """
 
 from collections import deque
