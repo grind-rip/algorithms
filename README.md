@@ -19,6 +19,9 @@ Depth-first search is a graph traversal algorithm that explores as deep as possi
 ## [Levenshtein Distance](./src/levenshtein_distance.py)
 Levenshtein distance is a string metric for measuring the difference between two sequences. The Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one word into the other.
 
+## [Longest Common Subsequence](./src/longest_common_subsequence.py)
+The longest common subsequence is the longest subsequence that is common to two or more sequences. It can be found using a dynamic programming approach.
+
 ## [Maximum Subarray](./src/maximum_subarray.py)
 The maximum subarray problem is the task of finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. It can be solved in O(n) time and O(1) space.
 

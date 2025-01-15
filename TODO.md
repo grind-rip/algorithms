@@ -7,3 +7,5 @@
 - [ ] Address linting errors
 - [ ] Add unit tests
 - [ ] Add a memoization solution for Levenshtein Distance
+- [ ] Add a memoization solution for Longest Common Subsequence
+- [ ] Add function for retreiving all LCSs for Longest Common Subsequence
