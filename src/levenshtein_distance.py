@@ -18,8 +18,9 @@ calculated as follows:
     * lev(a,tail(b)), representing an insertion into `a`
     * lev(tail(a),tail(b)), representing a substitution from `b` to `a`
 
-Where |a| is the length of `a` and |b| is the length of `b`. `tail` is a string
-of all but the first character.
+Where |a| is the length of `a` and |b| is the length of `b`. `head` is the
+first character in the string. `tail` is a string of all but the first
+character.
 
 * Insertion: Adds a character to the end
 * Deletion: Removes a character from the end
