@@ -36,7 +36,6 @@ are acyclic, therefore a set of visited nodes is not necessary.
 
 Finding the shortest path
 -------------------------
-
 Breadth-first search can also be used when finding the shortest path from the
 root to a target node. This is done by adding the "parent" node to the current
 node, then backtracking from the target node once it is found.
