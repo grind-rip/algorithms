@@ -130,9 +130,9 @@ def lev(a: str, b: str) -> int:
                 dp[i][j] = dp[i - 1][j - 1]
             else:
                 dp[i][j] = min(
-                    dp[i - 1][j] + 1,     # deletion
-                    dp[i][j - 1] + 1,     # insertion
-                    dp[i - 1][j - 1] + 1  # substitution
+                    dp[i - 1][j] + 1,  # deletion
+                    dp[i][j - 1] + 1,  # insertion
+                    dp[i - 1][j - 1] + 1,  # substitution
                 )
 
     return dp[i][j]
