@@ -7,13 +7,13 @@ A collection of algorithms
 ## [Binary Search](./src/binary_search.py)
 Binary search is an efficient algorithm for finding a target value in a sorted array.
 
-## [Breadth-first Search (BFS)](./src/bfs.py)
+## [Breadth-first Search (BFS)](./src/breadth_first_search.py)
 Breadth-first search is a graph traversal algorithm that explores all nodes at the current depth level before moving to nodes at the next depth level.
 
 ## [Cycle Detection](./src/cycle_detection.py)
 Cycle detection or cycle finding is the algorithmic problem of finding a cycle in a sequence of iterated function values.
 
-## [Depth-first Search (DFS)](./src/dfs.py)
+## [Depth-first Search (DFS)](./src/depth_first_search.py)
 Depth-first search is a graph traversal algorithm that explores as deep as possible along each branch before backtracking and traversing other nodes.
 
 ## [Levenshtein Distance](./src/levenshtein_distance.py)
