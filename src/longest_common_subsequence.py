@@ -91,7 +91,7 @@ def lcs(a: str, b: str) -> int:
             else:
                 dp[i][j] = max(
                     dp[i - 1][j],  # exclude the character at position i in `a`
-                    dp[i][j - 1]   # exclude the character at position j in `b`
+                    dp[i][j - 1],  # exclude the character at position j in `b`
                 )
 
     return dp[i][j]
