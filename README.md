@@ -25,6 +25,9 @@ The longest common subsequence is the longest subsequence that is common to two 
 ## [Maximum Subarray](./src/maximum_subarray.py)
 The maximum subarray problem is the task of finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. It can be solved in O(n) time and O(1) space.
 
+## [Merge Sort](./src/merge_sort.py)
+Merge sort is the quintessential divide-and-conquer sorting algorithm. It follows the premise that an array of one element is considered sorted. Furthermore, it is trivial to sort two sorted arrays.
+
 ## [Quickselect](./src/quickselect.py)
 Quickselect (also known as Hoare's selection algorithm) is a selection algorithm to find the kth smallest (or largest) element in an unordered list of n elements.
 
