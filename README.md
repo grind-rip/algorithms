@@ -22,6 +22,9 @@ Levenshtein distance is a string metric for measuring the difference between two
 ## [Longest Common Subsequence (LCS)](./src/longest_common_subsequence.py)
 The longest common subsequence is the longest subsequence that is common to two or more sequences. It can be found using a dynamic programming approach.
 
+## [Longest Increasing Subsequence (LIS)](./src/longest_increasing_subsequence.py)
+The longest increasing subsequence is the longest sequence of numbers from an array where each number is greater than the previous one. It can be found using a dynamic programming approach.
+
 ## [Maximum Subarray](./src/maximum_subarray.py)
 The maximum subarray problem is the task of finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. It can be solved in O(n) time and O(1) space.
 
