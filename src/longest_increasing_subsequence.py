@@ -20,7 +20,7 @@ subsequence with or without the addition of the current element under
 consideration.
 
 The time complexity is O(n^2) where n is the length of the array, however
-there's also a more efficient O(n log n) solution using binary search.
+there's also a more efficient O(nlog n) solution using binary search.
 """
 
 

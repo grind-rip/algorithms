@@ -12,7 +12,7 @@ The algorithm can be stated as follows:
   2. Repeatedly merge sublists to produce new sorted sublists until there is
      only one sublist remaining. This will be the sorted list.
 
-Time Complexity: O(n log n)
+Time Complexity: O(nlog n)
 Space Complexity: O(n)
 
 Counting Inversions
