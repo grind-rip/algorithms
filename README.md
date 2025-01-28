@@ -16,6 +16,9 @@ Cycle detection or cycle finding is the algorithmic problem of finding a cycle i
 ## [Depth-first Search (DFS)](./src/depth_first_search.py)
 Depth-first search is a graph traversal algorithm that explores as deep as possible along each branch before backtracking and traversing other nodes.
 
+## [Heapsort](./src/heapsort.py)
+Heapsort is a sorting algorithm that first reorganizes an input array into a heap, then repeatedly removes the largest node from that heap, placing it at the end of the array.
+
 ## [Levenshtein Distance](./src/levenshtein_distance.py)
 Levenshtein distance is a string metric for measuring the difference between two sequences. The Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one word into the other.
 
