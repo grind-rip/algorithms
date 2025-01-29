@@ -160,7 +160,7 @@ def _sift_down(l: list[int], i: int, n: int) -> None:
         # If the node has no children (i.e., it is a leaf node), it cannot be
         # sifted down any further.
         if _is_leaf(i, n):
-            return
+            break
         left, right = _left_child(i), _right_child(i)
         # To establish the max-heap property at i, up to three nodes must be
         # compared (the root and one or both of its children). The largest is
@@ -173,6 +173,9 @@ def _sift_down(l: list[int], i: int, n: int) -> None:
             largest = right
         if largest != i:
             l[i], l[largest] = l[largest], l[i]
+            i = largest
+        else:
+            break
 
 
 def _left_child(i: int) -> int:
@@ -246,3 +249,6 @@ def _sift_down_optimized(l: list[int], i: int, n: int) -> None:
             largest = right
         if largest != i:
             l[i], l[largest] = l[largest], l[i]
+            i = largest
+        else:
+            break
