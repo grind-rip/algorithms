@@ -76,7 +76,7 @@ The maximum number of operations for node heights in the heap are:
 This forms a geometric series:
    n/4 * 1 + n/8 * 2 + n/16 * 3 + ... + 1 * log n
 
-Solving this series results in  O(n), not O(nlog n)!
+Solving this series results in O(n), not O(nlog n)!
 
 The intuition is that while the root might need log n operations, there are
 very few nodes near the root. Most nodes are near the bottom and need very few
