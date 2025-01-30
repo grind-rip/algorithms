@@ -9,7 +9,7 @@ from unittest import TestCase
 from src.heapsort import heapsort, heapsort_optimized
 
 
-class TestSolution(TestCase):
+class TestHeapsort(TestCase):
     def test(self):
         """
         Test with 100 randomly generated lists.
