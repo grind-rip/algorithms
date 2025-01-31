@@ -18,7 +18,7 @@ following indices:
 
   * left   = 2*i + 1
   * right  = 2*i + 2
-  * parent = (i−1) / 2
+  * parent = (i−1) // 2
 
 Indeed, the formal definition of a heap is an array for which a[i] <= a[2*i+1]
 and a[i] <= a[2*i+2] for all i for zero-based arrays. a[0] is always the
@@ -131,7 +131,7 @@ def _heapify(l: list[int]) -> None:
     by half (n → n/2).
     """
     i = len(l) - 1
-    while i >= 0:  # For completeness, execute the final sift down.
+    while i >= 0:
         _sift_down(l, i, len(l))
         i -= 1
 
@@ -194,7 +194,7 @@ def _right_child(i: int) -> int:
 
 def _parent(i: int) -> int:
     """
-    The parent of a node at index i in zero-based array is given by (i-1)/2.
+    The parent of a node at index i in zero-based array is given by (i−1) // 2.
     """
     return (i - 1) // 2
 
@@ -202,8 +202,8 @@ def _parent(i: int) -> int:
 def _is_leaf(i: int, n: int) -> bool:
     """
     For a complete binary tree represented by a zero-based array of length n,
-    the first leaf node is at position n/2. If the node at index i is greater
-    or equal to n/2, it is a leaf node.
+    the first leaf node is at position n//2. If the node at index i is greater
+    or equal to n//2, it is a leaf node.
     """
     return i >= n // 2
 
