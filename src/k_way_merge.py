@@ -14,24 +14,11 @@ the list from which the element was taken is inserted into the heap. This
 process continues until the heap is empty.
 """
 
-from collections.abc import Iterable, Iterator
+from collections.abc import Iterator
 from heapq import heapify, heappop, heapreplace
-from typing import Protocol, TypeVar
 
 
-class Comparable(Protocol):
-    """
-    Defines a protocol for comparable types.
-    """
-
-    def __lt__(self, other) -> bool: ...
-
-
-# Create a TypeVar bound to Comparable
-T = TypeVar("T", bound=Comparable)
-
-
-def k_way_merge(*iterables: Iterable[T]) -> Iterator[T]:
+def k_way_merge(*iterables: list[int]) -> Iterator[int]:
     """
     k-way merge is a merge algorithm that, as the name suggests, merges k
     sorted lists into a single sorted list. It can be efficiently solved in
@@ -47,7 +34,7 @@ def k_way_merge(*iterables: Iterable[T]) -> Iterator[T]:
     # tuples, it compares elements in order until it finds a difference. Using
     # an index, a node from list with a lower index will take precedence over a
     # node with a higher index.
-    heap: list[tuple[T, int, Iterator[T]]] = []
+    heap: list[tuple[int, int, Iterator[int]]] = []
     for i, it in enumerate(map(iter, iterables)):
         try:
             e = next(it)
