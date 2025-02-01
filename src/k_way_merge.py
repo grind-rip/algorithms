@@ -32,8 +32,8 @@ def k_way_merge(*iterables: list[int]) -> Iterator[int]:
     # that associates it with an iterable. This is required to resolve tuple
     # comparisons where the values of nodes are the same. When Python compares
     # tuples, it compares elements in order until it finds a difference. Using
-    # an index, a node from list with a lower index will take precedence over a
-    # node with a higher index.
+    # an index, a node from a list with a lower index will take precedence over
+    # a node with a higher index.
     heap: list[tuple[int, int, Iterator[int]]] = []
     for i, it in enumerate(map(iter, iterables)):
         try:
