@@ -22,6 +22,9 @@ Heapsort is a sorting algorithm that first reorganizes an input array into a hea
 ## [k-way Merge](./src/k_way_merge.py)
 The k-way merge algorithm is a sequence merge algorithm that takes in k sorted lists, typically greater than two, and merges them into a single sorted list. It can be efficiently solved in O(nlog k) time using a heap, where n is the total number of elements for all k lists.
 
+## [kth Smallest (Largest)](./src/kth_smallest.py)
+The kth smallest (or largest) problem can be efficiently solved using a max-heap (or min-heap). Maintaining a heap of size k, the kth smallest value is always the root of the max-heap. To retrieve all k smallest elements, simply return the sorted heap.
+
 ## [Levenshtein Distance](./src/levenshtein_distance.py)
 Levenshtein distance is a string metric for measuring the difference between two sequences. The Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one word into the other.
 
