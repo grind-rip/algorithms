@@ -1,7 +1,7 @@
 """
-The `partition` function (in linear time) groups a list (ranging from indices
-'left' to 'right') into two parts: those less than a certain element, and those
-greater than or equal to the element.
+The partition function (in linear time) groups a list (ranging from indices
+left to right) into two parts: those less than a certain element, and those
+equal to or greater than the element.
 
 This implementation uses the Lomuto partition scheme, which chooses as the
 pivot the last element in the array.
@@ -20,9 +20,9 @@ It is used in both the quickselect and quicksort algorithms.
 def partition(l: list[int], left: int, right: int) -> int:
     """
     Reorder the list such that elements less than the pivot are before elements
-    greater than or equal to the pivot. When complete, the pivot is in its
-    final sorted position. The pivot is always the last element in the list
-    (Lomuto partition scheme).
+    equal to or greater than the pivot. When complete, the pivot is in its
+    final sorted position. The pivot is chosen as the last element in the
+    parition (Lomuto partition scheme).
 
     NOTE: We cannot simply use a slice of a list, since rearranging the
     elements in the slice will not reorder the elements in the original list.
@@ -40,13 +40,13 @@ def partition(l: list[int], left: int, right: int) -> int:
     pivot = l[right]
 
     # i (commonly referred to as the "store index") is used to denote the index
-    # of the pivot. j is used for scanning the list from `left` to `right - 1`.
+    # of the pivot. j is used for scanning the list from left to right-1.
     i, j = left, left
 
     # The loop maintains the following invariant:
     #
-    #   Elements 'left' through i-1 (inclusive) are less than 'pivot'
-    #   Elements 'i' through j (inclusive) are greater than or equal to 'pivot'
+    #   Elements left through i-1 (inclusive) are less than pivot
+    #   Elements i through j (inclusive) are equal to or greater than pivot
     while j < right:
         if l[j] < pivot:
             swap(l, i, j)
@@ -58,6 +58,6 @@ def partition(l: list[int], left: int, right: int) -> int:
     swap(l, i, right)
 
     # Return the index of the pivot. The pivot index can be used to determine
-    # the new 'left' and 'right' arguments for quicksort or can be used to
-    # determine the k-th element in a list.
+    # the new left and right arguments for quicksort or can be used to
+    # determine the kth element in a list.
     return i
