@@ -53,7 +53,7 @@ from collections import deque
 from src.shared.node import Node, T
 
 
-def dfs(*, root: Node[T], output: bool = False) -> None:
+def depth_first_search_recursive(*, root: Node[T], output: bool = False) -> None:
     """
     Traverses a graph from 'root' using depth-first search.
 
@@ -68,10 +68,10 @@ def dfs(*, root: Node[T], output: bool = False) -> None:
 
     for child in root.children:
         if not child.visited:
-            dfs(root=child, output=output)
+            depth_first_search_recursive(root=child, output=output)
 
 
-def dfs_stack(*, root: Node[T], output: bool = False) -> None:
+def depth_first_search_iterative(*, root: Node[T], output: bool = False) -> None:
     """
     Traverses a graph from 'root' using depth-first search using a stack.
 
