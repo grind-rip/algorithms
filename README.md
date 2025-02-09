@@ -45,3 +45,6 @@ Quickselect (also known as Hoare's selection algorithm) is a selection algorithm
 
 ## [Quicksort](./src/quicksort.py)
 Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
+
+## [Tree Traversal](./src/tree_traversal.py)
+Tree traversal is the process of visiting each node in a tree exactly once. Such traversals are classified by the order in which the nodes are visited. There are two main tree traversals: depth-first and breadth-first search. Additionally, depth-first search can be done pre-order, post-order, and in-order.
