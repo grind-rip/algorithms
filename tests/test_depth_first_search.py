@@ -6,7 +6,7 @@ Depth-first Search (DFS)
 from unittest import TestCase
 
 from src import depth_first_search
-from src.shared.nodes import Node
+from src.shared.node import Node
 
 
 class TestDepthFirstSearch(TestCase):

@@ -81,7 +81,7 @@ Breadth-first search is typically implemented iteratively using a queue.
 
 from collections import deque
 
-from src.shared.nodes import T, TreeNode
+from src.shared.tree_node import T, TreeNode
 
 
 def depth_first_search_recursive_pre_order(node: TreeNode[T]) -> list[T]:

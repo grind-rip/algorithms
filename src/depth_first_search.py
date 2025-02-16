@@ -50,7 +50,7 @@ are acyclic, therefore a set of visited nodes is not necessary.
 
 from collections import deque
 
-from src.shared.nodes import Node, T
+from src.shared.node import Node, T
 
 
 def depth_first_search_recursive(root: Node[T]) -> list[T]:

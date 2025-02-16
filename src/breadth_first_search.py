@@ -47,7 +47,7 @@ shortest path is reconstructed.
 
 from collections import deque
 
-from src.shared.nodes import Node, T
+from src.shared.node import Node, T
 
 
 def breadth_first_search(root: Node[T]) -> list[T]:

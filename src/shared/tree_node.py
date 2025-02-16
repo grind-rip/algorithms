@@ -15,17 +15,6 @@ class Comparable(Protocol):
 T = TypeVar("T", bound=Comparable)
 
 
-class Node(Generic[T]):
-    """
-    A generic node with a value of type 'T'.
-    """
-
-    def __init__(self, value: T) -> None:
-        self.value: T = value
-        self.parent: Node[T] | None = None
-        self.children: list[Node[T]] = []
-
-
 class TreeNode(Generic[T]):
     """
     A tree node with a value of type 'T'.

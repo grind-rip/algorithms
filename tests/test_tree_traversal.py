@@ -6,7 +6,7 @@ Tree Traversal
 from unittest import TestCase
 
 from src import tree_traversal
-from src.shared.nodes import TreeNode
+from src.shared.tree_node import TreeNode
 
 
 class TestTreeTraversal(TestCase):

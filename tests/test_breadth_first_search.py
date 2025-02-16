@@ -6,7 +6,7 @@ Breadth-first Search (BFS)
 from unittest import TestCase
 
 from src import breadth_first_search
-from src.shared.nodes import Node
+from src.shared.node import Node
 
 
 class TestBreadthFirstSearch(TestCase):
