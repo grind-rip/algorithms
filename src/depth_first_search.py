@@ -50,42 +50,50 @@ are acyclic, therefore a set of visited nodes is not necessary.
 
 from collections import deque
 
-from src.shared.node import Node, T
+from src.shared.nodes import Node, T
 
 
-def depth_first_search_recursive(*, root: Node[T], output: bool = False) -> None:
+def depth_first_search_recursive(root: Node[T]) -> list[T]:
     """
-    Traverses a graph from 'root' using depth-first search.
+    Traverses a graph from `root` using depth-first search.
 
     This function merely traverses the graph. In practical applications, the
     algorithm is used to search for a target.
     """
-    # Mark root as visited.
-    root.visited = True
+    l: list[T] = [root.value]
+    visited: set[Node[T]] = {root}
 
-    if output:
-        print(f"Visiting node: {root.value}")
+    def dfs(l: list[T], visited: set[Node[T]], root: Node[T] | None) -> None:
+        if not root:
+            return
+        for child in root.children:
+            if child not in visited:
+                l.append(child.value)
+                visited.add(child)
+                dfs(l, visited, child)
 
-    for child in root.children:
-        if not child.visited:
-            depth_first_search_recursive(root=child, output=output)
+    dfs(l, visited, root)
+    return l
 
 
-def depth_first_search_iterative(*, root: Node[T], output: bool = False) -> None:
+def depth_first_search_iterative(root: Node[T]) -> list[T]:
     """
-    Traverses a graph from 'root' using depth-first search using a stack.
+    Traverses a graph from `root` using depth-first search using a stack.
 
     This function merely traverses the graph. In practical applications, the
     algorithm is used to search for a target.
     """
     # Create stack, push root.
+    l: list[T] = []
     stack = deque([root])
+    visited: set[Node[T]] = set()
 
     while stack:
         curr: Node[T] = stack.pop()
-        if output:
-            print(f"Visiting node: {curr.value}")
-        if not curr.visited:
-            curr.visited = True
+        l.append(curr.value)
+        if curr not in visited:
+            visited.add(curr)
             for child in curr.children:
                 stack.append(child)
+
+    return l
