@@ -1,0 +1,4 @@
+"""
+Knuth-Morris-Pratt Algorithm
+----------------------------
+"""
