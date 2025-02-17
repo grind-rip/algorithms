@@ -14,3 +14,4 @@
 - [ ] Improve unit tests (i.e., less fuzzing)
 - [x] Clean up Breadth-first Search (BFS) and Depth-first Search (DFS)
 - [x] Consolidate node definitions
+- [ ] Add delete to Tree Operations
