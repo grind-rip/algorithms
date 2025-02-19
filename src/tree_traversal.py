@@ -201,9 +201,9 @@ def depth_first_search_iterative_in_order(node: TreeNode[T]) -> list[T]:
     # With in-order, we visit a node after the left node has been visited, but
     # before the right. To accomplish this, we first go as far left as possible
     # by pushing left nodes onto the stack. This process terminates when a leaf
-    # node is reached. We visit this node and pop it from the stack. An
-    # additional iteration accounts for the root and we start the process again
-    # with the right node.
+    # node is reached. We visit this node and pop it from the stack. We repeat
+    # the process with the first non-null right node, otherwise we continue
+    # popping nodes from the stack.
     while stack or curr:
         while curr:
             stack.append(curr)
