@@ -26,6 +26,7 @@ dependencies = [
 # RET505: Unnecessary `elif` after `return` statement
 # RUF002: Docstring contains ambiguous `ν`
 # RUF003: Docstring contains ambiguous `ν`
+# S101: Use of `assert` detected
 # T201: `print` found
 # W605: invalid escape sequence '\ '
-ignore = ["E741", "PERF401", "RET505", "RUF002", "RUF003", "T201", "W605"]
+ignore = ["E741", "PERF401", "RET505", "RUF002", "RUF003", "S101", "T201", "W605"]

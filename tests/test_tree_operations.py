@@ -29,10 +29,10 @@ class TestTreeOperations(TestCase):
     #          4
     #          ●
     #        /   \
-    #      3       6
+    #      2       6
     #      ●       ●
     #    /   \   /   \
-    #   1     2 5     7
+    #   1     3 5     7
     #   ●     ● ●     ●
 
     def setUp(self):
@@ -68,13 +68,13 @@ class TestTreeOperations(TestCase):
         self.node_7 = TreeNode(value=7)
 
         # Set up parent relationships for binary search tree
-        self.node_3.parent, self.node_6.parent = self.node_4, self.node_4
-        self.node_1.parent, self.node_2.parent = self.node_3, self.node_3
+        self.node_2.parent, self.node_6.parent = self.node_4, self.node_4
+        self.node_1.parent, self.node_3.parent = self.node_2, self.node_2
         self.node_5.parent, self.node_7.parent = self.node_6, self.node_6
 
         # Set up child relationships for binary search tree
-        self.node_4.left, self.node_4.right = self.node_3, self.node_6
-        self.node_3.left, self.node_3.right = self.node_1, self.node_2
+        self.node_4.left, self.node_4.right = self.node_2, self.node_6
+        self.node_2.left, self.node_2.right = self.node_1, self.node_3
         self.node_6.left, self.node_6.right = self.node_5, self.node_7
 
         # Set root node for binary search tree
@@ -120,6 +120,14 @@ class TestTreeOperations(TestCase):
         exp = self.node_7
         assert tree_operations.bst_max(self.bst_root) == exp
 
+    def test_bst_successor(self):
+        exp = self.node_5
+        assert tree_operations.bst_successor(self.bst_root) == exp
+
+    def test_bst_predecessor(self):
+        exp = self.node_3
+        assert tree_operations.bst_predecessor(self.bst_root) == exp
+
     def test_bst_insert(self):
         """
         Tests both `bst_insert_recursive()` and `bst_insert_iterative()`.
@@ -155,3 +163,44 @@ class TestTreeOperations(TestCase):
         assert tree_operations.bst_insert_recursive(self.node_3, 4).value == 4
         assert tree_operations.bst_insert_iterative(self.node_3, 6).value == 6
         assert_tree(self.bst_root, exp)
+
+    def test_bst_delete(self):
+        # Binary search tree:
+        #
+        #        3            3           3
+        #        ●            ●           ●
+        #      /   \        /   \       /   \
+        #     1      5     1     6     1     6
+        #     ●      ●     ●     ●     ●     ●
+        #          /   \
+        #         4     6
+        #         ●     ●
+        #
+        # Remove 5 and 4, then remove 3 (root).
+
+        # Create nodes for binary search tree
+        self.Node_1 = TreeNode(value=1)
+        self.Node_3 = TreeNode(value=3)
+        self.Node_4 = TreeNode(value=4)
+        self.Node_5 = TreeNode(value=5)
+        self.Node_6 = TreeNode(value=6)
+
+        # Set up parent relationships for binary search tree
+        self.Node_1.parent, self.Node_5.parent = self.Node_3, self.Node_3
+        self.Node_4.parent, self.Node_6.parent = self.Node_5, self.Node_5
+
+        # Set up child relationships for binary search tree
+        self.Node_3.left, self.Node_3.right = self.Node_1, self.Node_5
+        self.Node_5.left, self.Node_5.right = self.Node_4, self.Node_6
+
+        # Set root node for binary search tree
+        self.bst_root = self.Node_3
+
+        exp = [3, 1, 6]
+        root = self.bst_root
+        root = tree_operations.bst_delete(root, 5)
+        root = tree_operations.bst_delete(root, 4)
+        assert_tree(self.bst_root, exp)
+        exp = [6, 1]
+        root = tree_operations.bst_delete(self.Node_3, 3)
+        assert_tree(root, [6, 1])
