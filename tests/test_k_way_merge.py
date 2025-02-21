@@ -17,6 +17,8 @@ class TestKWayMerge(TestCase):
         """
         k = random.randint(0, 1000)
         n = random.randint(0, 1000)
-        iterables = [sorted([random.randint(-1000, 1000) for _ in range(n)]) for _ in range(k)]
+        iterables = [
+            sorted([random.randint(-1000, 1000) for _ in range(n)]) for _ in range(k)
+        ]
         exp = sorted(itertools.chain(*iterables.copy()))
         assert list(k_way_merge(*iterables)) == exp

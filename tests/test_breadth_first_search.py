@@ -54,4 +54,6 @@ class TestBreadthFirstSearch(TestCase):
 
     def test_shortest_path_parent_pointers(self):
         exp = ["A", "C", "G"]
-        assert breadth_first_search.shortest_path_parent_pointers(self.root, self.G) == exp
+        assert (
+            breadth_first_search.shortest_path_parent_pointers(self.root, self.G) == exp
+        )

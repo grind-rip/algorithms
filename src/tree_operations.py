@@ -287,7 +287,9 @@ def bst_delete(root: TreeNode[T] | None, target: T) -> TreeNode | None:
     target.
     """
 
-    def shift(root: TreeNode[T] | None, u: TreeNode, v: TreeNode | None) -> TreeNode | None:
+    def shift(
+        root: TreeNode[T] | None, u: TreeNode, v: TreeNode | None
+    ) -> TreeNode | None:
         """
         Shift node v in the place of node u.
         """
