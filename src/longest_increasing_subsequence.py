@@ -6,7 +6,7 @@ The longest increasing subsequence is the longest sequence of numbers from an
 array where each number is greater than the previous one. It can be found using
 a dynamic programming approach.
 
-The algorithm is fairly straight-forward. Given an array of elements, A, we
+The algorithm is fairly straightforward. Given an array of elements, A, we
 maintain an array, dp, of the longest increasing subsequence ending at index i.
 
   dp[i] is equivalent to LIS(A[0]...A[i]) for all `n`
