@@ -64,7 +64,7 @@ def three_way_partition(arr: list[int], key: int) -> None:
             # Swap A[j] with A[i], increment i and j. NOTE: Here, we *do*
             # increment j, since A[j] is now sorted.
             arr[j], arr[i] = arr[i], arr[j]
-            j += 1
             i += 1
+            j += 1
         else:
             j += 1
