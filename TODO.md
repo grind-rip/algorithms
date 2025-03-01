@@ -15,3 +15,4 @@
 - [x] Clean up Breadth-first Search (BFS) and Depth-first Search (DFS)
 - [x] Consolidate node definitions
 - [x] Add delete to Tree Operations
+- [ ] Use `arr` instead of `l` for arrays

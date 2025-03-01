@@ -49,5 +49,8 @@ Quicksort is a divide-and-conquer algorithm. It works by selecting a 'pivot' ele
 ## [Tree Operations](./src/tree_traversal.py)
 Common tree operations involve searching, inserting, and deleting nodes in the tree. For binary trees, these operations require simple pointer manipulation. For binary search trees, however, the invariant-the key of each internal node must be greater than all the keys in the node's left subtree and less than all the keys in the node's right subtree-must be maintained, making the operations slightly more involved.
 
+## [Three-way Partition](./src/three_way_partition.py)
+Three-way partition, also known as the Dutch national flag problem, is an algorithm for partitioning three types of elements (those less than a given key, those equal to a given key, and those greater than a given key). Three-way partitioning can be done in linear time.
+
 ## [Tree Traversal](./src/tree_traversal.py)
 Tree traversal is the process of visiting each node in a tree exactly once. Such traversals are classified by the order in which the nodes are visited. There are two main tree traversals: depth-first and breadth-first search. Additionally, depth-first search can be done pre-order, post-order, and in-order.
