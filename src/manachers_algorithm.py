@@ -192,8 +192,8 @@ def augmentation_with_separator(s: str) -> str:
             right += 1
 
     # Convert back to indices in the original string.
-    start, end = start // 2, end // 2
-    return s[start:end]
+    start, end = start // 2, (end - 1) // 2
+    return s[start : end + 1]
 
 
 def palindromic_radii_array(s: str) -> str:
@@ -244,8 +244,8 @@ def palindromic_radii_array(s: str) -> str:
             max_radius, max_center = palindrome_radii[i], i
 
     # Convert back to indices in the original string.
-    start, end = (max_center - max_radius) // 2, (max_center + max_radius) // 2
-    return s[start:end]
+    start, end = (max_center - max_radius) // 2, (max_center + max_radius - 1) // 2
+    return s[start : end + 1]
 
 
 def manachers_algorithm(s: str) -> str:
@@ -321,5 +321,5 @@ def manachers_algorithm(s: str) -> str:
             max_radius, max_center = palindrome_radii[i], i
 
     # Convert back to indices in the original string.
-    start, end = (max_center - max_radius) // 2, (max_center + max_radius) // 2
-    return s[start:end]
+    start, end = (max_center - max_radius) // 2, (max_center + max_radius - 1) // 2
+    return s[start : end + 1]
