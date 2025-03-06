@@ -34,6 +34,9 @@ The longest common subsequence is the longest subsequence that is common to two 
 ## [Longest Increasing Subsequence (LIS)](./src/longest_increasing_subsequence.py)
 The longest increasing subsequence is the longest sequence of numbers from an array where each number is greater than the previous one. It can be found using a dynamic programming approach.
 
+## [Manacher's Algorithm](./src/manachers_algorithm.py)
+Manacher's Algorithm was discovered by Glenn K. Manacher in 1975 and can be used to find the longest palindromic substring of a string and all palindromic substrings of a string in linear time.
+
 ## [Maximum Subarray](./src/maximum_subarray.py)
 The maximum subarray problem is the task of finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. It can be solved in O(n) time and O(1) space.
 
