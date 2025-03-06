@@ -16,3 +16,4 @@
 - [x] Consolidate node definitions
 - [x] Add delete to Tree Operations
 - [ ] Use `arr` instead of `l` for arrays
+- [ ] Add algorithms from *Grokking Algorithms* by Aditya Bhargava
