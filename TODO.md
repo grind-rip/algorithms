@@ -8,7 +8,7 @@
 - [ ] Add unit tests
 - [ ] Add a memoization approach for Levenshtein Distance
 - [ ] Add a memoization approach for Longest Common Subsequence
-- [ ] Add function for retreiving all LCSs for Longest Common Subsequence
+- [ ] Add function for retrieving all LCSs for Longest Common Subsequence
 - [ ] Add a binary search approach for Longest Increasing Subsequence
 - [ ] Add a memoization approach for Longest Increasing Subsequence
 - [ ] Improve unit tests (i.e., less fuzzing)
@@ -18,3 +18,5 @@
 - [ ] Use `arr` instead of `l` for arrays
 - [ ] Add algorithms from *Grokking Algorithms* by Aditya Bhargava
 - [ ] Add suffix tree approach to Longest Common Substring
+- [ ] Standardize unit tests (functions vs. classes)
+- [ ] Add optimizations to Longest Common Substring
