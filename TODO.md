@@ -6,14 +6,15 @@
 - [x] Binary Search
 - [ ] Address linting errors
 - [ ] Add unit tests
-- [ ] Add a memoization solution for Levenshtein Distance
-- [ ] Add a memoization solution for Longest Common Subsequence
+- [ ] Add a memoization approach for Levenshtein Distance
+- [ ] Add a memoization approach for Longest Common Subsequence
 - [ ] Add function for retreiving all LCSs for Longest Common Subsequence
-- [ ] Add a binary search solution for Longest Increasing Subsequence
-- [ ] Add a memoization solution for Longest Increasing Subsequence
+- [ ] Add a binary search approach for Longest Increasing Subsequence
+- [ ] Add a memoization approach for Longest Increasing Subsequence
 - [ ] Improve unit tests (i.e., less fuzzing)
 - [x] Clean up Breadth-first Search (BFS) and Depth-first Search (DFS)
 - [x] Consolidate node definitions
 - [x] Add delete to Tree Operations
 - [ ] Use `arr` instead of `l` for arrays
 - [ ] Add algorithms from *Grokking Algorithms* by Aditya Bhargava
+- [ ] Add suffix tree approach to Longest Common Substring
