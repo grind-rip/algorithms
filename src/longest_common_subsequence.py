@@ -57,7 +57,7 @@ is the edit distance using only the insertion and deletion edit operations.
 """
 
 
-def lcs(a: str, b: str) -> int:
+def longest_common_subsequence(a: str, b: str) -> int:
     """
     Given two strings, `a` and `b`, compute the length of their Longest Common
     Subsequence (LCS).

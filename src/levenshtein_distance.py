@@ -65,7 +65,7 @@ start-position from the end-position.
 """
 
 
-def lev(a: str, b: str) -> int:
+def levenshtein_distance(a: str, b: str) -> int:
     """
     Uses the Wagner–Fischer algorithm, a dynamic programming algorithm that
     computes the edit distance between two strings of characters, to calculate

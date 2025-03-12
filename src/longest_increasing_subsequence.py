@@ -24,7 +24,7 @@ there's also a more efficient O(nlog n) solution using binary search.
 """
 
 
-def lis(nums: list[int]) -> int:
+def longest_increasing_subsequence(nums: list[int]) -> int:
     """
     Given an array of integers compute the length of its Longest Increasing
     Subsequence (LIS).
