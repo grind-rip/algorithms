@@ -22,13 +22,13 @@ The length of the Longest Common Subsequence (LCS(a,b)) between two strings,
 
 Where |a| is the length of `a` and |b| is the length of `b`.
 
-Formally, given two sequences, X and Y, and prefixes of X and Y, Xi and Yi, to
-find the LCS of Xi and Yj (LCS(Xi,Yi)), compare xi and yj, the ith and jth
+Formally, given two sequences, X and Y, and prefixes of X and Y, Xi and Yj, to
+find the LCS of Xi and Yj (LCS(Xi,Yj)), compare xi and yj, the ith and jth
 character in the two sequences. If they are equal, then the previous LCS
 (LCS(Xi−1,Yj−1)) is extended by that element. If they are not equal, then the
 current LCS is the maximum LCS for the sequences, LCS(Xi,Yj−1) and
 LCS(Xi−1,Yj). If the sequences are the same length, but not identical, then
-both are retained. The base case, when either Xi or Yi is empty, is an empty
+both are retained. The base case, when either Xi or Yj is empty, is an empty
 string, ϵ.
 
 From this, we can derive an optimal subproblem:
@@ -95,3 +95,44 @@ def longest_common_subsequence(a: str, b: str) -> int:
                 )
 
     return dp[i][j]
+
+
+def backtrack(dp: list[list[int]], a: str, b: str, i: int, j: int) -> str:
+    """
+    Generate a longest common subsequence between `a` and `b` using the `dp`
+    table.
+
+    The following function backtracks through the `dp` table in order to
+    generate a longest common subsequence. If the last characters in the
+    prefixes of `a` and `b` are equal, it must be in an LCS. If they are not
+    equal, we check to see what choice, either keeping Xi or Yj, would yield
+    the largest LCS.
+
+    NOTE: This function returns *a* longest common subsequence. There may exist
+    more subsequences with the same length.
+    """
+    if i == 0 or j == 0:
+        return ""
+
+    # If a[i-1] == b[j-1], it must be part of the LCS.
+    if a[i - 1] == b[j - 1]:
+        return backtrack(dp, a, b, i - 1, j - 1) + a[i - 1]
+
+    # Else, choose the prefix which will give the largest LCS. In this way, we
+    # backtrack through the table, following the path of the calculated LCSs.
+    if dp[i][j - 1] > dp[i - 1][j]:
+        return backtrack(dp, a, b, i, j - 1)
+
+    return backtrack(dp, a, b, i - 1, j)
+
+
+def print_table(dp: list[list[int]], a: str, b: str) -> None:
+    """
+    Print the table used to store the LCS sequence for each step of the
+    calculation.
+    """
+    print()
+    print(f"   ε  {'  '.join(b)}")
+    print(f"ε {dp[0]}")
+    for i in range(1, len(a) + 1):
+        print(f"{a[i - 1]} {dp[i]}")
